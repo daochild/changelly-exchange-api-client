@@ -1,0 +1,53 @@
+{
+    "name": "@daochild/changelly-exchange-api-client",
+    "version": "1.0.0",
+    "description": "A Node.js client for the Changelly Exchange API",
+    "type": "module",
+    "contributors": [
+        {
+            "name": "Pavlo Bolhar",
+            "url": "https://github.com/daochild",
+            "githubUsername": "daochild"
+        }
+    ],
+    "author": "Pavlo Bolhar <paul.bolhar@gmail.com>",
+    "license": "MIT",
+    "engines": {
+        "node": "^18.0.0",
+        "npm": "^9.0.0"
+    },
+    "scripts": {
+        "build": "npm run build-ts",
+        "test": "jest --coverage=false --verbose",
+        "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch-ts\"",
+        "build-ts": "rimraf ./dist && tsc",
+        "watch-ts": "tsc -w",
+        "lint": "eslint src/*.ts",
+        "lint-fix": "yarn lint --fix",
+        "debug": "npm run build && npm run watch-debug",
+        "typecheck": "tsc --noEmit",
+        "run-prettier": "prettier src/*.mts",
+        "validate-prettiness": "yarn run-prettier -c",
+        "make-prettier": "yarn run-prettier --write",
+        "publish": "npm run build && npm publish --access public"
+    },
+    "dependencies": {
+        "axios": "^1.5.0",
+        "crypto": "^1.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "^14.18.59",
+        "@typescript-eslint/eslint-plugin": "4.33.0",
+        "@typescript-eslint/parser": "4.33.0",
+        "concurrently": "6.5.1",
+        "dotenv": "^16.3.1",
+        "eslint": "7.32.0",
+        "eslint-config-prettier": "8.8.0",
+        "eslint-plugin-import": "2.27.5",
+        "nodemon": "2.0.22",
+        "prettier": "2.8.8",
+        "rimraf": "^5.0.1",
+        "ts-node": "^10.9.1",
+        "typescript": "5.2.2"
+    }
+}
