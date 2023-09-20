@@ -1,6 +1,6 @@
 {
     "name": "@daochild/changelly-exchange-api-client",
-    "version": "1.0.103",
+    "version": "1.0.104",
     "description": "A Node.js client for the Changelly Exchange API",
     "type": "module",
     "contributors": [
