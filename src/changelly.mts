@@ -2,6 +2,7 @@ import * as crypto from 'crypto';
 import axios, {AxiosResponse} from 'axios';
 import {KeyObject} from "crypto";
 import {JsonRpcResponse} from "./typing/rpc.types.mjs";
+import { Buffer } from 'node:buffer';
 
 import {
     ChangellyResponse,
@@ -43,6 +44,7 @@ export class Changelly {
     }
 
     private _sign(message: object): string {
+        // @ts-ignore
         return crypto.sign('sha256', Buffer.from(JSON.stringify(message)), {
             // @ts-ignore
             key: this.privKey,
