@@ -1,9 +1,9 @@
 {
     "name": "@daochild/changelly-exchange-api-client",
-    "main": "./dist/changelly.mjs",
-    "version": "1.0.105",
+    "main": "dist/src/index",
+    "types": "dist/src/index",
+    "version": "1.1.0",
     "description": "A Node.js client for the Changelly Exchange API",
-    "type": "module",
     "contributors": [
         {
             "name": "Pavlo Bolhar",
@@ -23,7 +23,7 @@
     },
     "scripts": {
         "build": "npm run build-ts",
-        "test": "jest --coverage=false --verbose",
+        "test": "mocha --require ts-node/register test/**/*.ts",
         "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch-ts\"",
         "build-ts": "rimraf ./dist && tsc",
         "watch-ts": "tsc -w",
@@ -41,14 +41,18 @@
         "crypto": "^1.0.1"
     },
     "devDependencies": {
+        "@types/chai": "^4.3.6",
+        "@types/mocha": "^10.0.1",
         "@types/node": "^14.18.59",
         "@typescript-eslint/eslint-plugin": "4.33.0",
         "@typescript-eslint/parser": "4.33.0",
+        "chai": "^4.3.8",
         "concurrently": "6.5.1",
         "dotenv": "^16.3.1",
         "eslint": "7.32.0",
         "eslint-config-prettier": "8.8.0",
         "eslint-plugin-import": "2.27.5",
+        "mocha": "^10.2.0",
         "nodemon": "2.0.22",
         "prettier": "2.8.8",
         "rimraf": "^5.0.1",

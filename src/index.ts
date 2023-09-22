@@ -1,7 +1,7 @@
 import * as crypto from 'crypto';
 import axios, {AxiosResponse} from 'axios';
 import {KeyObject} from "crypto";
-import {JsonRpcResponse} from "./typing/rpc.types.mjs";
+import {JsonRpcResponse} from "./typing/rpc.types";
 import { Buffer } from 'node:buffer';
 
 import {
@@ -17,7 +17,7 @@ import {
     ExchangeTransaction, FinishedTransaction,
     FixedExchangeTransaction,
     SearchTransactions, TransactionStatus, ValidationResult
-} from "./typing/changelly.types.mjs";
+} from "./typing/changelly.types.js";
 
 export class Changelly {
     private readonly apiKey: string;

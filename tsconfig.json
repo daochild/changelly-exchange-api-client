@@ -2,22 +2,22 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "module": "esnext",
+        "module": "commonjs",
         "esModuleInterop": true,
-        "target": "es6",
+        "target": "es5",
         "noImplicitAny": true,
-        "moduleResolution": "node",
         "allowJs": true,
         "skipLibCheck": true,
         "sourceMap": true,
         "outDir": "dist",
         "declaration": true,
         "baseUrl": ".",
-        "types":  ["node"],
+        "types":  ["node", "mocha", "chai"],
         "lib": [ "esnext", "dom", "es6", "es5", "es2020", "es2022"]
     },
     "include": [
-        "src/**/*"
+        "src/**/*",
+        "test/**/*"
     ],
     "exclude": [
         "dist",

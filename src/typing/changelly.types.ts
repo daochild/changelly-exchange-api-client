@@ -1,4 +1,4 @@
-import { JsonRpcResponse } from "./rpc.types.mjs";
+import { JsonRpcResponse } from "./rpc.types.js";
 
 export interface ChangellyResponse<T> extends JsonRpcResponse {
   result: T;

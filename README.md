@@ -1,5 +1,5 @@
 # changelly-exchange-api-client
-Changelly exchange v2 API client. Typescript supported.
+Index exchange v2 API client. Typescript supported.
 
 ## Installation
 ```bash
