@@ -2,7 +2,7 @@
     "name": "@daochild/changelly-exchange-api-client",
     "main": "dist/src/index",
     "types": "dist/src/index",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "description": "A Node.js client for the Changelly Exchange API",
     "contributors": [
         {
