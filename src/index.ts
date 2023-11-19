@@ -34,7 +34,7 @@ export class Changelly {
     constructor(apiKey: string, privKey: string) {
         this.apiKey = apiKey;
         this.privKey = crypto.createPrivateKey({
-            key: privKey,
+            key: Buffer.from(privKey, 'hex'),
             format: "der",
             type: "pkcs8",
         });
